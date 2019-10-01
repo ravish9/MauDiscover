@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Prototype1</string>
+    <string-array name="Tourist">
+
+
+        <item> Select Tourist Type</item>
+        <item> Cultural</item>
+        <item> Ecological</item>
+        <item> Adventure</item>
+        <item> Nature</item>
+        <item> Sports</item>
+    </string-array>
+</resources>

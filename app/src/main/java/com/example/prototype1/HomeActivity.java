@@ -3,9 +3,11 @@ package com.example.prototype1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import java.util.ArrayList;
 import android.content.Intent;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,6 +30,30 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        LinearLayout gallery = findViewById(R.id.gallery);
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        for (int i = 0; i <6 ; i++) {
+
+            View view = inflater.inflate(R.layout.item, gallery, false);
+
+            TextView textView = view.findViewById(R.id.textView3);
+            textView.setText("Place "+ i);
+
+            ImageView imageView = view.findViewById(R.id.imageView2);
+            imageView.setImageResource(R.mipmap.ic_launcher);
+
+            gallery.addView(view);
+
+        }
+
+
+
+
+
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(HomeActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Tourist));

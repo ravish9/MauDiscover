@@ -13,6 +13,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class mainMenu extends AppCompatActivity {
 
     Button button6;
+    Button button3;
+    Button button2;
+    Button button4;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -34,6 +37,41 @@ public class mainMenu extends AppCompatActivity {
                 finish();
             }
         });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intToRestaurant = new Intent(mainMenu.this, RestaurantActivity.class);
+                startActivity(intToRestaurant);
+            }
+        });
+
+
+
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intToHotel = new Intent(mainMenu.this, HotelActivity.class);
+                startActivity(intToHotel);
+            }
+        });
+
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intToShopping = new Intent(mainMenu.this, ShoppingActivity.class);
+                startActivity(intToShopping);
+            }
+        });
+
+
+
+
 
        button6.setOnClickListener(new View.OnClickListener() {
             @Override

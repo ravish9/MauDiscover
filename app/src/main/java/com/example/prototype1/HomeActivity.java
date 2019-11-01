@@ -34,19 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         LinearLayout gallery = findViewById(R.id.gallery);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        for (int i = 0; i <6 ; i++) {
 
-            View view = inflater.inflate(R.layout.item, gallery, false);
-
-            TextView textView = view.findViewById(R.id.textView3);
-            textView.setText("Place "+ i);
-
-            ImageView imageView = view.findViewById(R.id.imageView2);
-            imageView.setImageResource(R.mipmap.ic_launcher);
-
-            gallery.addView(view);
-
-        }
 
 
 

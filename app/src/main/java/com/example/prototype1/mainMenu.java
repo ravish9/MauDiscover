@@ -25,7 +25,9 @@ public class mainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         button6 = findViewById(R.id.button6);
-
+        button3 = findViewById(R.id.button3);
+        button2 = findViewById(R.id.button2);
+        button4 = findViewById(R.id.button4);
         configureCloseButton();
     }
 

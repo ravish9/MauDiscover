@@ -21,10 +21,10 @@
         app:fontFamily="sans-serif-condensed-light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103"
+        app:layout_constraintVertical_bias="0.053"
         tools:text="Hotels" />
 
     <ImageButton
@@ -59,6 +59,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="336dp"
+            android:scaleType="fitXY"
             android:src="@drawable/hotel1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_button_android2"
@@ -99,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="1.0">
 
+
         <ImageButton
             android:id="@+id/image_button_android2"
             android:layout_width="204dp"
@@ -106,6 +108,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="336dp"
+            android:scaleType="fitXY"
             android:src="@drawable/hotel2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +116,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintVertical_bias="1.0" />
-
 
         <TextView
             android:id="@+id/textView7"
@@ -152,6 +154,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:src="@drawable/hotel3"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.018"
@@ -193,10 +196,11 @@
 
         <ImageButton
             android:id="@+id/image_button_android4"
-            android:layout_width="204dp"
-            android:layout_height="90dp"
+            android:layout_width="181dp"
+            android:layout_height="76dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:scaleType="fitXY"
             android:src="@drawable/hotel4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -207,8 +211,8 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="201dp"
-            android:layout_height="80dp"
+            android:layout_width="218dp"
+            android:layout_height="93dp"
             android:layout_marginBottom="376dp"
             android:gravity="center"
             android:text="Hilton Resort And Spa"
@@ -239,12 +243,13 @@
 
         <ImageButton
             android:id="@+id/image_button_android5"
-            android:layout_width="199dp"
+            android:layout_width="179dp"
             android:layout_height="79dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
             android:src="@drawable/hotel5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -274,6 +279,7 @@
 
     <LinearLayout
         android:id="@+id/button6"
+
         android:layout_width="412dp"
         android:layout_height="93dp"
         android:background="@android:drawable/btn_default"
@@ -287,12 +293,13 @@
 
         <ImageButton
             android:id="@+id/image_button_android6"
-            android:layout_width="204dp"
-            android:layout_height="90dp"
+            android:layout_width="173dp"
+            android:layout_height="93dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
             android:src="@drawable/hotel6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

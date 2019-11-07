@@ -123,22 +123,143 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <HorizontalScrollView
-        android:layout_width="355dp"
-        android:layout_height="172dp"
-        android:scrollbars="none"
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="409dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.731">
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
-            android:id="@+id/gallery"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" />
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/casela"
+                android:text="Casela"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:text="Button2" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Button3" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Button4" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Button5" />
+
+        </LinearLayout>
     </HorizontalScrollView>
+
+
+
+    <HorizontalScrollView
+    android:layout_width="409dp"
+    android:layout_height="211dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/casela"
+                android:text="Casela"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tamarind"
+            android:text="Tamarind Waterfalls"
+            android:textColor="#FAF1F1"
+            android:textSize="24sp" />
+
+
+
+        <Button
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/crocodile"
+        android:text="La Vanille Crocodile Park"
+        android:textColor="#FAF1F1"
+        android:textSize="24sp" />
+
+
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/chamarel"
+                android:text="Chamarael"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
+
+
+
+        <Button
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cerf"
+        android:text="Ile Aux Cerfs"
+        android:textColor="#FAF1F1"
+        android:textSize="24sp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/morne"
+            android:text="Le Morne Brabant"
+            android:textColor="#FAF1F1"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gorges"
+            android:text="Black River Gorges"
+            android:textColor="#FAF1F1"
+            android:textSize="24sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

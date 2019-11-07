@@ -31,8 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        LinearLayout gallery = findViewById(R.id.gallery);
-        LayoutInflater inflater = LayoutInflater.from(this);
+
 
 
 

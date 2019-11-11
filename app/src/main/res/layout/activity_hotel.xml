@@ -6,94 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".HotelActivity">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Hotels."
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053"
+        tools:text="Hotels" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="69dp"
+        android:layout_height="71dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_width="417dp"
+        android:layout_height="639dp"
         android:fillViewport="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewHotel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginTop="80dp"
-                android:text="Hotels."
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
             <Button
-                android:layout_width="wrap_content"
+                android:id="@+id/image_button_android"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="60dp"
+                android:layout_weight="1"
                 android:background="@drawable/hotel1"
                 android:text="Angsana Balaclava"
                 android:textColor="#FAF1F1"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Two" />
+                android:id="@+id/image_button_android2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/hotel2"
+                android:text="LUX* Belle Marea"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Three" />
+                android:id="@+id/image_button_android3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/hotel3"
+                android:text="InterContinental Mauritius"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Four" />
+                android:id="@+id/image_button_android4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/hotel4"
+                android:text="Hilton Resort And Spa"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Five" />
+                android:id="@+id/image_button_android5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/hotel2"
+                android:text="Four Seasons Resort"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Six" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Seven" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Eight" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:text="Button Nine" />
+                android:id="@+id/image_button_android6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/hotel3"
+                android:text="Blue Beryl"
+                android:textColor="#FAF1F1"
+                android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
 

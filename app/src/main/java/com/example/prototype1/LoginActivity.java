@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(LoginActivity.this,"SignUp Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this,"SignIN Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 editor.putBoolean("registered", true);

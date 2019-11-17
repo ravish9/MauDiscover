@@ -42,14 +42,13 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="417dp"
-        android:layout_height="639dp"
+        android:layout_width="438dp"
+        android:layout_height="629dp"
         android:fillViewport="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
@@ -57,67 +56,186 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/image_button_android"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel1"
-                android:text="Angsana Balaclava"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
-            <Button
-                android:id="@+id/image_button_android2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel2"
-                android:text="LUX* Belle Marea"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                <Button
+                    android:id="@+id/image_button_android"
+                    android:layout_width="413dp"
+                    android:layout_height="202dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel1"
 
-            <Button
-                android:id="@+id/image_button_android3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel3"
-                android:text="InterContinental Mauritius"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/image_button_android4"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel4"
-                android:text="Hilton Resort And Spa"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android"
 
-            <Button
-                android:id="@+id/image_button_android5"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel2"
-                android:text="Four Seasons Resort"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Angsana Balaclava"
+                    android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/image_button_android6"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                android:background="@drawable/hotel3"
-                android:text="Blue Beryl"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/image_button_android2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel2"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android2"
+
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="LUX* Belle Mare"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/image_button_android3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel3"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android3"
+
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="InterContinental"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/image_button_android4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel4"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android4"
+
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Hilton Resort And Spa"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/image_button_android5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel5"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android5"
+
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Four Seasons Resort"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="261dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/image_button_android6"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel6"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="253dp"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/image_button_android6"
+
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Blue Beryl"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+
         </LinearLayout>
     </ScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,8 +106,9 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
-        android:layout_width="441dp"
-        android:layout_height="209dp"
+        android:layout_width="414dp"
+        android:layout_height="203dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
@@ -128,7 +129,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/casela"/>
+                    android:background="@drawable/casela" />
 
                 <TextView
                     android:id="@+id/textView1.1"
@@ -185,7 +186,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/crocodile"/>
+                    android:background="@drawable/crocodile" />
 
                 <TextView
                     android:id="@+id/textView1.3"
@@ -213,7 +214,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/chamarel"/>
+                    android:background="@drawable/chamarel" />
 
                 <TextView
                     android:id="@+id/textView1.4"
@@ -241,7 +242,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/morne"/>
+                    android:background="@drawable/morne" />
 
                 <TextView
                     android:id="@+id/textView1.6"
@@ -268,7 +269,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/gorges"/>
+                    android:background="@drawable/gorges" />
 
                 <TextView
                     android:id="@+id/textView1.7"
@@ -285,17 +286,17 @@
             </RelativeLayout>
 
 
-
         </LinearLayout>
     </HorizontalScrollView>
 
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="492dp"
-        android:layout_height="209dp"
+        android:layout_width="417dp"
+        android:layout_height="194dp"
         android:layout_marginTop="6dp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
@@ -315,7 +316,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/dodo"/>
+                    android:background="@drawable/dodo" />
 
                 <TextView
                     android:id="@+id/textView2.3"
@@ -332,8 +333,6 @@
             </RelativeLayout>
 
 
-
-
             <RelativeLayout
                 android:layout_width="149dp"
                 android:layout_height="match_parent"
@@ -345,7 +344,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/corner"/>
+                    android:background="@drawable/corner" />
 
                 <TextView
                     android:id="@+id/textView2.2"
@@ -373,7 +372,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bigfoot"/>
+                    android:background="@drawable/bigfoot" />
 
                 <TextView
                     android:id="@+id/textView2.1"
@@ -400,7 +399,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/underwater"/>
+                    android:background="@drawable/underwater" />
 
                 <TextView
                     android:id="@+id/textView2.4"
@@ -427,7 +426,7 @@
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bigfoot"/>
+                    android:background="@drawable/grand" />
 
                 <TextView
                     android:id="@+id/textView2.5"
@@ -436,7 +435,7 @@
                     android:layout_below="@id/button2.5"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Bid Foot Adventure"
+                    android:text="Grand Bassin"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
@@ -451,26 +450,52 @@
                 android:paddingRight="16dp">
 
                 <Button
-                    android:id="@+id/button2.1"
+                    android:id="@+id/button2.7"
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bigfoot"/>
+                    android:background="@drawable/ile" />
 
                 <TextView
-                    android:id="@+id/textView2.1"
+                    android:id="@+id/textView2.7"
                     android:layout_width="114dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/button2.1"
+                    android:layout_below="@id/button2.7"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Bid Foot Adventure"
+                    android:text="Ile aux Aigrettes"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.8"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/water" />
+
+                <TextView
+                    android:id="@+id/textView2.8"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.8"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Water Skiing"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
 
 
         </LinearLayout>

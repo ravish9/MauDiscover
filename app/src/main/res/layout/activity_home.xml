@@ -106,8 +106,8 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
-        android:layout_width="439dp"
-        android:layout_height="182dp"
+        android:layout_width="441dp"
+        android:layout_height="209dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
@@ -117,71 +117,174 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="150dp"
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/casela"
-                android:text="Casela"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
-            <Button
-                android:layout_width="150dp"
+                <Button
+                    android:id="@+id/buttonCasela"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/casela"/>
+
+                <TextView
+                    android:id="@+id/textView1.1"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buttonCasela"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Casela"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/tamarind"
-                android:text="Tamarind Waterfalls"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button1.2"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tamarind"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView1.2"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button1.2"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Tamarind Waterfalls"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
 
 
-            <Button
-                android:layout_width="150dp"
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/crocodile"
-                android:text="La Vanille Crocodile Park"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button1.3"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/crocodile"/>
+
+                <TextView
+                    android:id="@+id/textView1.3"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button1.3"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="La Vanille Crocodile Park"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
 
 
-            <Button
-                android:layout_width="150dp"
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/chamarel"
-                android:text="Chamarael"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button1.4"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chamarel"/>
+
+                <TextView
+                    android:id="@+id/textView1.4"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button1.4"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Chamarel"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
 
 
-            <Button
-                android:layout_width="150dp"
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/cerf"
-                android:text="Ile Aux Cerfs"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/morne"
-                android:text="Le Morne Brabant"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                <Button
+                    android:id="@+id/button1.6"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/morne"/>
 
-            <Button
-                android:layout_width="150dp"
+                <TextView
+                    android:id="@+id/textView1.6"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button1.6"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Le Morne Brabant"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/gorges"
-                android:text="Black River Gorges"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button1.7"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gorges"/>
+
+                <TextView
+                    android:id="@+id/textView1.7"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button1.7"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Black River Gorges"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -189,50 +292,186 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="448dp"
-        android:layout_height="173dp"
+        android:layout_width="492dp"
+        android:layout_height="209dp"
         android:layout_marginTop="6dp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="150dp"
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/casela"
-                android:text="Casela"
-                android:textColor="#FAF1F1"
-                android:textSize="24sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:text="Button2" />
+                <Button
+                    android:id="@+id/button2.3"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dodo"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Button3" />
+                <TextView
+                    android:id="@+id/textView2.3"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.3"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Dodo Quest"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Button4" />
+            </RelativeLayout>
 
-            <Button
-                android:layout_width="match_parent"
+
+
+
+            <RelativeLayout
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Button5" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.2"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner"/>
+
+                <TextView
+                    android:id="@+id/textView2.2"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.2"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Curoius Corner"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.1"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bigfoot"/>
+
+                <TextView
+                    android:id="@+id/textView2.1"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.1"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Bid Foot Adventure"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.4"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/underwater"/>
+
+                <TextView
+                    android:id="@+id/textView2.4"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.4"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Underwater Sea Walk"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.5"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bigfoot"/>
+
+                <TextView
+                    android:id="@+id/textView2.5"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.5"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Bid Foot Adventure"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/button2.1"
+                    android:layout_width="110dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bigfoot"/>
+
+                <TextView
+                    android:id="@+id/textView2.1"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button2.1"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Bid Foot Adventure"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="640dp" />
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -251,6 +490,8 @@
         app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

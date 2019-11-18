@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity  {
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     Spinner mySpinner;
-
+    Button buttonCasela;
 
 
 
@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity  {
         configureMenuButton();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        buttonCasela = findViewById(R.id.buttonCasela);
 
         mySpinner=(Spinner) findViewById(R.id.spinner);
 
@@ -98,6 +98,15 @@ public class HomeActivity extends AppCompatActivity  {
 
             }
 
+        });
+
+        buttonCasela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intToCasela = new Intent(HomeActivity.this, CaselaActivity.class);
+                startActivity(intToCasela);
+            }
         });
 
 

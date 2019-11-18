@@ -10,4 +10,6 @@
         <item> Nature</item>
         <item> Sports</item>
     </string-array>
+
+    <string name="action_settings">Settings</string>
 </resources>

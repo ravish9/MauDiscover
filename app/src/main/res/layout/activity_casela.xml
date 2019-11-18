@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaselaActivity">
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="413dp"
+        android:layout_height="333dp"
+        android:layout_weight="0"
+        android:background="@drawable/casela"
+        android:gravity="bottom|center_horizontal"
+        android:text="Casela World Of Adventures"
+        android:textColor="#FFF"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="407dp"
+        android:layout_height="401dp"
+        android:fillViewport="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-condensed-light" />
+
+            <Button
+                android:id="@+id/buttonCaselaMap"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginBottom="20dip"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:drawableStart="@android:drawable/stat_sys_phone_call"
+                android:drawableLeft="@android:drawable/ic_dialog_map"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="Royal Road, Cascavelle"
+                android:textColor="#444242"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonCaselaPhone"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="20dip"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/stat_sys_phone_call"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="+230 4522828"
+                android:textColor="#444242"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonCaselaWebsite"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="20dip"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/stat_sys_phone_call"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="www.caselapark.com"
+                android:textColor="#444242"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

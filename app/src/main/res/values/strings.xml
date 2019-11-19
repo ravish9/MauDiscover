@@ -7,9 +7,7 @@
         <item> Cultural</item>
         <item> Ecological</item>
         <item> Adventure</item>
-        <item> Nature</item>
+        <item> Normal</item>
         <item> Sports</item>
     </string-array>
-
-    <string name="action_settings">Settings</string>
 </resources>

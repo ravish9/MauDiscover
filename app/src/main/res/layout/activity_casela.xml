@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="413dp"
-        android:layout_height="333dp"
+        android:layout_width="463dp"
+        android:layout_height="344dp"
         android:layout_weight="0"
         android:background="@drawable/casela"
         android:gravity="bottom|center_horizontal"
@@ -22,8 +22,8 @@
 
     <ScrollView
         android:id="@+id/scrollView5"
-        android:layout_width="407dp"
-        android:layout_height="401dp"
+        android:layout_width="456dp"
+        android:layout_height="396dp"
         android:fillViewport="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,11 +83,12 @@
                 android:background="#00FFFFFF"
                 android:clickable="true"
                 android:drawableLeft="@android:drawable/stat_sys_phone_call"
-                android:gravity="center"
+                android:gravity="right|center_vertical"
                 android:padding="12dip"
                 android:text="www.caselapark.com"
+                android:textAllCaps="false"
                 android:textColor="#444242"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
     </ScrollView>

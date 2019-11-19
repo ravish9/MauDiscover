@@ -168,20 +168,20 @@
                 android:paddingRight="16dp">
 
                 <Button
-                    android:id="@+id/buttonSub"
+                    android:id="@+id/buttonKite"
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/sub" />
+                    android:background="@drawable/kite" />
 
                 <TextView
                     android:id="@+id/textView2.4"
                     android:layout_width="114dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonSub"
+                    android:layout_below="@id/buttonKite"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Submarine Tour"
+                    android:text="Kitesurfing "
                     android:textSize="20sp"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
@@ -223,20 +223,20 @@
                 android:paddingRight="16dp">
 
                 <Button
-                    android:id="@+id/buttonAlbatross"
+                    android:id="@+id/buttonFly"
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/albatross" />
+                    android:background="@drawable/fly" />
 
                 <TextView
                     android:id="@+id/textView2.7"
                     android:layout_width="114dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonAlbatross"
+                    android:layout_below="@id/buttonFly"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Albatross Seaplane Ride "
+                    android:text="FLYn’Dive"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
@@ -298,6 +298,9 @@
             </RelativeLayout>
 
 
+
+
+
             <RelativeLayout
                 android:layout_width="149dp"
                 android:layout_height="match_parent"
@@ -305,26 +308,25 @@
                 android:paddingRight="16dp">
 
                 <Button
-                    android:id="@+id/buttonCatamaran"
+                    android:id="@+id/buttonKayaking"
                     android:layout_width="110dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:background="@drawable/catamaran" />
+                    android:background="@drawable/kayak" />
 
                 <TextView
-                    android:id="@+id/textView2.10"
+                    android:id="@+id/textView2.16"
                     android:layout_width="114dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonCatamaran"
+                    android:layout_below="@id/buttonKayaking"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Catamaran Cruise"
+                    android:text="Kayaking"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
             </RelativeLayout>
-
 
         </LinearLayout>
 
@@ -359,32 +361,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal" >
 
-            <RelativeLayout
-                android:layout_width="149dp"
-                android:layout_height="match_parent"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
 
-                <Button
-                    android:id="@+id/buttonAlbatross2"
-                    android:layout_width="110dp"
-                    android:layout_height="140dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/albatross" />
-
-                <TextView
-                    android:id="@+id/textView2.11"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonAlbatross2"
-                    android:layout_marginTop="0dp"
-                    android:gravity="center_horizontal"
-                    android:text="Albatross Seaplane Ride "
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="640dp" />
-
-            </RelativeLayout>
 
 
             <RelativeLayout
@@ -420,27 +397,26 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <Button
-                    android:id="@+id/buttonSub2"
-                    android:layout_width="110dp"
-                    android:layout_height="140dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/sub" />
+            <Button
+                android:id="@+id/buttonFly2"
+                android:layout_width="110dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/fly" />
 
-                <TextView
-                    android:id="@+id/textView2.14"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonSub2"
-                    android:layout_marginTop="0dp"
-                    android:gravity="center_horizontal"
-                    android:text="Submarine Tour"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="640dp" />
+            <TextView
+                android:id="@+id/textView2.72"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonFly2"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:text="FLYn’Dive"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="640dp" />
 
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="149dp"
@@ -448,27 +424,25 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <Button
-                    android:id="@+id/buttonMorne2"
-                    android:layout_width="110dp"
-                    android:layout_height="140dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/morne" />
+            <Button
+                android:id="@+id/buttonKite2"
+                android:layout_width="110dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/kite" />
 
-                <TextView
-                    android:id="@+id/textView2.13"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/buttonMorne2"
-                    android:layout_marginTop="0dp"
-                    android:gravity="center_horizontal"
-                    android:text="Hiking (Le Morne)"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="640dp" />
-
+            <TextView
+                android:id="@+id/textView2.42"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonKite2"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:text="Kitesurfing "
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="640dp" />
             </RelativeLayout>
-
         </LinearLayout>
     </HorizontalScrollView>
 

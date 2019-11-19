@@ -79,7 +79,7 @@ public class HomeActivity extends AppCompatActivity  {
                         startActivity(intent);
                         break;
                     case 4:
-                        intent = new Intent(HomeActivity.this, NatureActivity.class);
+                        intent = new Intent(HomeActivity.this, HomeActivity.class);
                         startActivity(intent);
                         break;
                     case 5:

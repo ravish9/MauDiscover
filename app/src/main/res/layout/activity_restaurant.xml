@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.103"
-        tools:text="MauDiscover." />
+        tools:text="Restaurant" />
 
 
 
@@ -43,8 +43,95 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="609dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
 
+
+            <RelativeLayout
+                android:layout_width="429dp"
+                android:layout_height="220dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="222dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="@id/image_button_android"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Angsana Balaclava"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/image_button_android"
+                    android:layout_width="229dp"
+                    android:layout_height="163dp"
+                    android:layout_alignBottom="@+id/textView3"
+                    android:layout_marginBottom="-168dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hotel1"
+                    android:textColor="#FAF1F1"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/image_button_android"
+                    android:paddingTop="40dp">
+
+                    <Button
+                        android:id="@+id/buttonCaselaMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="#00FFFFFF"
+                        android:gravity="right"
+                        android:padding="12dip"
+                        android:paddingRight="5dp"
+                        android:text="Royal Road, Cascavelle"
+                        android:textColor="#444242"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="180dp"
+                        android:layout_height="72dp"
+                        android:layout_below="@+id/buttonCaselaMap"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-2dp"
+                        android:text="Found in the heart of the Labourdonnais estate at Mapou La Table du Château is considered to be a refined and contemporary fine dining restaurant"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/buttonBook"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView4"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg"
+                        android:padding="12dip"
+                        android:paddingRight="5dp"
+                        android:text="Book Now"
+                        android:textColor="#444242"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

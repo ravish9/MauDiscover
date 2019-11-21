@@ -78,11 +78,8 @@ public class HomeActivity extends AppCompatActivity  {
                         intent = new Intent(HomeActivity.this, AdventureActivity.class);
                         startActivity(intent);
                         break;
+
                     case 4:
-                        intent = new Intent(HomeActivity.this, HomeActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 5:
                         intent = new Intent(HomeActivity.this, SportsActivity.class);
                         startActivity(intent);
                         break;

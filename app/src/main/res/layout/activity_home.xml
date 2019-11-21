@@ -6,18 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="303dp"
         android:layout_height="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:text="MauDiscover."
         android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold"
         app:fontFamily="sans-serif-condensed-light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="MauDiscover." />
@@ -29,7 +30,7 @@
         android:text="The app that travels with you."
         android:textStyle="italic"
         app:fontFamily="sans-serif-light"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -38,11 +39,11 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="65dp"
-        android:layout_height="55dp"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
         android:background="#00FFFFFF"
         android:scaleType="centerCrop"
-        android:src="@android:drawable/ic_menu_sort_by_size"
+        android:src="@drawable/menu"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -50,17 +51,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="274dp"
         android:layout_height="23dp"
-        android:spinnerMode="dropdown"
         android:entries="@array/Tourist"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider" />
 
@@ -68,14 +67,14 @@
         android:id="@+id/divider"
         android:layout_width="377dp"
         android:layout_height="1dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
         android:background="#1A000000"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.062" />
 
     <View
         android:id="@+id/divider2"
@@ -100,27 +99,27 @@
         android:typeface="sans"
         app:fontFamily="sans-serif-condensed-light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
-        android:layout_width="414dp"
-        android:layout_height="203dp"
+        android:layout_width="394dp"
+        android:layout_height="201dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -128,6 +127,10 @@
                     android:id="@+id/buttonCasela"
                     android:layout_width="110dp"
                     android:layout_height="140dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:background="@drawable/casela" />
 
@@ -139,7 +142,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Casela"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -147,7 +151,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -168,7 +172,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Tamarind Waterfalls"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -177,7 +182,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -196,7 +201,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="La Vanille Crocodile Park"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -205,7 +211,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -224,7 +230,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Chamarel"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -233,7 +240,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -252,7 +259,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Le Morne Brabant"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -260,7 +268,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -279,7 +287,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Black River Gorges"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -292,11 +301,8 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="417dp"
-        android:layout_height="194dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="374dp"
+        android:layout_height="184dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
@@ -307,7 +313,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -326,7 +332,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Dodo Quest"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -335,7 +342,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -353,8 +360,9 @@
                     android:layout_below="@id/button2.2"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Curoius Corner"
-                    android:textSize="20sp"
+                    android:text="Curious Corner"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -363,7 +371,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -381,8 +389,9 @@
                     android:layout_below="@id/button2.1"
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
-                    android:text="Bid Foot Adventure"
-                    android:textSize="20sp"
+                    android:text="Big Foot Adventure"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -390,7 +399,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -409,7 +418,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Underwater Sea Walk"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -417,7 +427,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -436,7 +446,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Grand Bassin"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -445,7 +456,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -464,7 +475,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Ile aux Aigrettes"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -472,7 +484,7 @@
 
             <RelativeLayout
                 android:layout_width="149dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -491,7 +503,8 @@
                     android:layout_marginTop="0dp"
                     android:gravity="center_horizontal"
                     android:text="Water Skiing"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-condensed-light"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="640dp" />
 
@@ -503,20 +516,15 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="282dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="280dp"
+        android:layout_height="29dp"
         android:text="Our Top Picks"
         android:textColor="#CD000000"
         android:textSize="18sp"
         android:typeface="sans"
         app:fontFamily="sans-serif-condensed-light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ public class HotelActivity extends AppCompatActivity {
     Button androidImageButton3;
     Button androidImageButton4;
     Button androidImageButton5;
-    Button androidImageButton6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class HotelActivity extends AppCompatActivity {
         androidImageButton3 =  findViewById(R.id.image_button_android3);
         androidImageButton4 =  findViewById(R.id.image_button_android4);
         androidImageButton5 =  findViewById(R.id.image_button_android5);
-        androidImageButton6 =  findViewById(R.id.image_button_android6);
+
 
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -86,15 +86,6 @@ public class HotelActivity extends AppCompatActivity {
             }
         });
 
-        androidImageButton6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.blueberyl.com/"));
-                startActivity(intent);
-            }
-        });
 
 
 

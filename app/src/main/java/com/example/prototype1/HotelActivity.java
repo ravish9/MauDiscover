@@ -29,11 +29,11 @@ public class HotelActivity extends AppCompatActivity {
 
 
 
-        androidImageButton =  findViewById(R.id.image_button_android);
-        androidImageButton2 =  findViewById(R.id.image_button_android2);
-        androidImageButton3 =  findViewById(R.id.image_button_android3);
-        androidImageButton4 =  findViewById(R.id.image_button_android4);
-        androidImageButton5 =  findViewById(R.id.image_button_android5);
+        androidImageButton =  findViewById(R.id.buttonBook1);
+        androidImageButton2 =  findViewById(R.id.buttonBook2);
+        androidImageButton3 =  findViewById(R.id.buttonBook3);
+        androidImageButton4 =  findViewById(R.id.buttonBook4);
+        androidImageButton5 =  findViewById(R.id.buttonBook5);
 
 
         androidImageButton.setOnClickListener(new View.OnClickListener() {

@@ -33,11 +33,65 @@ public class AdventureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
+
+
         configureMenuButton();
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        mySpinner = (Spinner) findViewById(R.id.spinner);
+
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AdventureActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Tourist));
+
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+
+        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View view,
+                                       int position, long row_id) {
+                final Intent intent;
+                switch (position) {
+                    case 1:
+                        intent = new Intent(AdventureActivity.this, CulturalActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(AdventureActivity.this, EcologicalActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(AdventureActivity.this, AdventureActivity.class);
+                        startActivity(intent);
+                        break;
+
+                    case 4:
+                        intent = new Intent(AdventureActivity.this, SportsActivity.class);
+                        startActivity(intent);
+                        break;
+
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+        });
+
 
     }
-
-
     private void configureMenuButton(){
         ImageButton menu_button = findViewById(R.id.imageButton);
         menu_button.setOnClickListener(new View.OnClickListener(){

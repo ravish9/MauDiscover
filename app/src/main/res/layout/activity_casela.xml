@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="463dp"
-        android:layout_height="344dp"
+        android:layout_width="416dp"
+        android:layout_height="327dp"
         android:layout_weight="0"
         android:background="@drawable/casela"
         android:gravity="bottom|center_horizontal"
@@ -22,8 +22,8 @@
 
     <ScrollView
         android:id="@+id/scrollView5"
-        android:layout_width="456dp"
-        android:layout_height="396dp"
+        android:layout_width="396dp"
+        android:layout_height="394dp"
         android:fillViewport="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -19,7 +20,7 @@ public class HotelActivity extends AppCompatActivity {
     Button androidImageButton3;
     Button androidImageButton4;
     Button androidImageButton5;
-
+    Button buttonHotel1Map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class HotelActivity extends AppCompatActivity {
 
 
 
-
+        buttonHotel1Map = findViewById(R.id.buttonHotel1Map);
         androidImageButton =  findViewById(R.id.buttonBook1);
         androidImageButton2 =  findViewById(R.id.buttonBook2);
         androidImageButton3 =  findViewById(R.id.buttonBook3);
@@ -86,7 +87,20 @@ public class HotelActivity extends AppCompatActivity {
             }
         });
 
-
+        buttonHotel1Map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Uri gmmIntentUri = Uri.parse("geo:-20.099998, 57.513399?q=");
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        startActivity(mapIntent);
+                    }
+                }, 1000);
+            }
+        });
 
 
 

@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import android.view.MotionEvent;
+
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailId, password;
@@ -28,12 +30,16 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     static SharedPreferences prefs;
     static SharedPreferences.Editor editor;
+    float x1, x2, y1, y2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+
+
+
 
 
         prefs = this.getSharedPreferences("state", MODE_PRIVATE);
@@ -152,9 +158,30 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    public boolean onTouchEvent(MotionEvent touchEvent){
+        switch(touchEvent.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = touchEvent.getX();
+                y1 = touchEvent.getY();
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = touchEvent.getX();
+                y2 = touchEvent.getY();
+                if(x1 < x2){
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+                }
+                break;
+        }
+        return false;
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
+
+
+
 }

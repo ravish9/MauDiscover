@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".SpeechActivity"
+            android:label="@string/title_activity_speech"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".SportsActivity" />
         <activity android:name=".NatureActivity" />
         <activity android:name=".CaselaActivity" />

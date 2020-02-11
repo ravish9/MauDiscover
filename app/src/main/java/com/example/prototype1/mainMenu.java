@@ -15,6 +15,7 @@ public class mainMenu extends AppCompatActivity {
     Button button6;
     Button button3;
     Button button2;
+    Button button5;
     Button button4;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -28,6 +29,7 @@ public class mainMenu extends AppCompatActivity {
         button3 = findViewById(R.id.button3);
         button2 = findViewById(R.id.button2);
         button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
         configureCloseButton();
     }
 
@@ -72,7 +74,14 @@ public class mainMenu extends AppCompatActivity {
         });
 
 
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intToShopping = new Intent(mainMenu.this, SpeechActivity.class);
+                startActivity(intToShopping);
+            }
+        });
 
 
        button6.setOnClickListener(new View.OnClickListener() {

@@ -9,4 +9,6 @@
         <item> Adventure</item>
         <item> Sports</item>
     </string-array>
+    <string name="title_activity_speech">SpeechActivity</string>
+    <string name="hint">Tap on mic to start</string>
 </resources>

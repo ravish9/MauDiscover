@@ -78,7 +78,7 @@ public class mainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intToShopping = new Intent(mainMenu.this, SpeechActivity.class);
+                Intent intToShopping = new Intent(mainMenu.this, VoiceActivity.class);
                 startActivity(intToShopping);
             }
         });

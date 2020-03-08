@@ -6,9 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".ShoppingActivity">
 
-
-
-
-
-
+z
 </androidx.constraintlayout.widget.ConstraintLayout>

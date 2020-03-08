@@ -2,7 +2,13 @@ package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -11,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -32,7 +41,8 @@ public class HomeActivity extends AppCompatActivity  {
     Button buttonCasela;
 
 
-
+    private TextToSpeech myTTS;
+    private SpeechRecognizer mySpeechRecognizer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +117,107 @@ public class HomeActivity extends AppCompatActivity  {
         });
 
 
+
+
+
+        initializeTextToSpeech();
+        initializeSpeechRecognizer();
+    }
+
+    private void initializeSpeechRecognizer() {
+        if (SpeechRecognizer.isRecognitionAvailable(this)) ;
+        {
+            mySpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
+            mySpeechRecognizer.setRecognitionListener(new RecognitionListener() {
+                @Override
+                public void onReadyForSpeech(Bundle bundle) {
+
+                }
+
+                @Override
+                public void onBeginningOfSpeech() {
+
+                }
+
+                @Override
+                public void onRmsChanged(float v) {
+
+                }
+
+                @Override
+                public void onBufferReceived(byte[] bytes) {
+
+                }
+
+                @Override
+                public void onEndOfSpeech() {
+
+                }
+
+                @Override
+                public void onError(int i) {
+
+                }
+
+                @Override
+                public void onResults(Bundle bundle) {
+                    List<String> results = bundle.getStringArrayList(
+                            SpeechRecognizer.RESULTS_RECOGNITION
+                    );
+                    ProcessResults(results.get(0));
+
+                }
+
+                @Override
+                public void onPartialResults(Bundle bundle) {
+
+                }
+
+                @Override
+                public void onEvent(int i, Bundle bundle) {
+
+                }
+            });
+
+
+        }
+    }
+
+    private void ProcessResults(String command) {
+        command = command.toLowerCase();
+
+        if (command.indexOf("crocodile") != -1) {
+            Intent intent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.lavanille-naturepark.com/index.php/en/home-1"));
+            startActivity(intent);
+        }
+    }
+
+
+    private void initializeTextToSpeech() {
+        myTTS=new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(myTTS.getEngines().size()==0){
+                    Toast.makeText(HomeActivity.this, "There is no TTS engine on your device"
+                            , Toast.LENGTH_LONG).show();
+                    finish();
+                }else{
+                    myTTS.setLanguage(Locale.UK);
+                    speak("Hello User");
+
+
+                }
+            }
+        });
+    }
+
+    private void speak(String message){
+        if(Build.VERSION.SDK_INT>=21){
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+        }else{
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null);
+        }
     }
 
 
@@ -121,5 +232,31 @@ public class HomeActivity extends AppCompatActivity  {
                 startActivity(new Intent(HomeActivity.this, mainMenu.class));
             }
         });
+    }
+
+
+    private void btn_speak(){
+        Button btn_speak = findViewById(R.id.btn_speak);
+        btn_speak.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS,1);
+                mySpeechRecognizer.startListening(intent);
+
+
+            }
+
+
+        });
+    }
+
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        myTTS.shutdown();
     }
 }

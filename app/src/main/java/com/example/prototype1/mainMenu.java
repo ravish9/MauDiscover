@@ -42,15 +42,6 @@ public class mainMenu extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intToRestaurant = new Intent(mainMenu.this, RestaurantActivity.class);
-                startActivity(intToRestaurant);
-            }
-        });
-
 
 
 
@@ -64,7 +55,7 @@ public class mainMenu extends AppCompatActivity {
         });
 
 
-        button4.setOnClickListener(new View.OnClickListener() {
+        /*button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -73,7 +64,7 @@ public class mainMenu extends AppCompatActivity {
             }
         });
 
-
+*/
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

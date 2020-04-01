@@ -204,7 +204,7 @@ public class HomeActivity extends AppCompatActivity  {
                     finish();
                 }else{
                     myTTS.setLanguage(Locale.UK);
-                    speak("Hello User");
+                    speak("Welcome to modiscover");
 
 
                 }

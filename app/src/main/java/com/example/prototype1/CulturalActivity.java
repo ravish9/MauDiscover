@@ -2,7 +2,9 @@ package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -11,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import java.util.ArrayList;
+import java.util.Locale;
+
 import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -89,9 +93,47 @@ public class CulturalActivity extends AppCompatActivity {
             }
 
         });
-
+        initializeTextToSpeech();
 
     }
+
+    private TextToSpeech myTTS;
+    private void initializeTextToSpeech() {
+        myTTS=new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(myTTS.getEngines().size()==0){
+                    Toast.makeText(CulturalActivity.this, "There is no TTS engine on your device"
+                            , Toast.LENGTH_LONG).show();
+                    finish();
+                }else{
+                    myTTS.setLanguage(Locale.UK);
+                    speak("You are in the cultural section");
+
+
+                }
+            }
+        });
+    }
+
+    private void speak(String message){
+        if(Build.VERSION.SDK_INT>=21){
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+        }else{
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null);
+        }
+    }
+
+
+
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        myTTS.shutdown();
+    }
+
+
     private void configureMenuButton(){
         ImageButton menu_button = findViewById(R.id.imageButton);
         menu_button.setOnClickListener(new View.OnClickListener(){

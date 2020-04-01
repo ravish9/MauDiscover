@@ -2,13 +2,18 @@ package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Locale;
 
 public class mainMenu extends AppCompatActivity {
 
@@ -31,7 +36,48 @@ public class mainMenu extends AppCompatActivity {
         button4 = findViewById(R.id.button4);
         button5 = findViewById(R.id.button5);
         configureCloseButton();
+
+        initializeTextToSpeech();
     }
+
+
+    private TextToSpeech myTTS;
+    private void initializeTextToSpeech() {
+        myTTS=new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(myTTS.getEngines().size()==0){
+                    Toast.makeText(mainMenu.this, "There is no TTS engine on your device"
+                            , Toast.LENGTH_LONG).show();
+                    finish();
+                }else{
+                    myTTS.setLanguage(Locale.UK);
+                    speak("You are in the main menu section");
+
+
+                }
+            }
+        });
+    }
+
+    private void speak(String message){
+        if(Build.VERSION.SDK_INT>=21){
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+        }else{
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null);
+        }
+    }
+
+
+
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        myTTS.shutdown();
+    }
+
+
 
     private void configureCloseButton(){
         ImageButton close_button = (ImageButton) findViewById(R.id.close_button);

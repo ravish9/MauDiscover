@@ -1,7 +1,10 @@
 package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +33,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static android.Manifest.permission.RECORD_AUDIO;
 
 
 public class HomeActivity extends AppCompatActivity  {
@@ -47,6 +51,8 @@ public class HomeActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        ActivityCompat.requestPermissions(this, new String[]{RECORD_AUDIO} , PackageManager.PERMISSION_GRANTED);
 
         configureMenuButton();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

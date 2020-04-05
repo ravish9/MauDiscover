@@ -7,17 +7,63 @@
     tools:context=".VoiceActivity">
 
 
-    <Button
-        android:id="@+id/btn_speak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="230dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="60dp"
+        android:background="#4CAF50"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operatorTextView" />
+
+    <TextView
+        android:id="@+id/firstNumTextView"
+        android:layout_width="224dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="32dp"
+        android:background="#2196F3"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Enter Amount"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/operatorTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/operatorTextView"
+        android:layout_width="231dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="296dp"
+        android:background="#FF9800"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Enter Currency"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="GO!"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="8dp" />
 
 
 

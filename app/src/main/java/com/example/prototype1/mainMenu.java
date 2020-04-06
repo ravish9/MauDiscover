@@ -52,7 +52,7 @@ public class mainMenu extends AppCompatActivity {
                     finish();
                 }else{
                     myTTS.setLanguage(Locale.UK);
-                    speak("You are in the main menu section");
+                    speak("You are in the main menu section. The options available are hotels, restaurants, shopping, travel guide, currency converter, and you can also log out by pressing the button on the bottom right corner. To close this screen, press the x icon located on the top right corner.");
 
 
                 }

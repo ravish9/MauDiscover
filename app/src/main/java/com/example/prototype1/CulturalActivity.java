@@ -108,7 +108,7 @@ public class CulturalActivity extends AppCompatActivity {
                     finish();
                 }else{
                     myTTS.setLanguage(Locale.UK);
-                    speak("You are in the cultural section");
+                    speak("You are in the cultural section. Below are some places you might find interesting. We suggest to visit grand bassin.");
 
 
                 }

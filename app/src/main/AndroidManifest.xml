@@ -13,15 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VoiceActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".SportsActivity" />
+        <activity android:name=".VoiceActivity"/>
+   <activity android:name=".SportsActivity" />
         <activity android:name=".NatureActivity" />
         <activity android:name=".CaselaActivity" />
         <activity android:name=".AdventureActivity" />
@@ -31,6 +24,10 @@
         <activity android:name=".HotelActivity" />
         <activity android:name=".mainMenu" />
         <activity android:name=".HomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
 
         </activity>
         <activity android:name=".LoginActivity"/>

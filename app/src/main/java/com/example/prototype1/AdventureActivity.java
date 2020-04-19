@@ -2,7 +2,9 @@ package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -11,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import java.util.ArrayList;
+import java.util.Locale;
+
 import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -44,12 +48,12 @@ public class AdventureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
 
-        sm=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
 
-        acelVal=SensorManager.GRAVITY_EARTH;
-        acelLast=SensorManager.GRAVITY_EARTH;
-        shake=0.00f;
+        acelVal = SensorManager.GRAVITY_EARTH;
+        acelLast = SensorManager.GRAVITY_EARTH;
+        shake = 0.00f;
 
         configureMenuButton();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -69,8 +73,6 @@ public class AdventureActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
             }
-
-
 
 
             @Override
@@ -109,7 +111,44 @@ public class AdventureActivity extends AppCompatActivity {
 
         });
 
+        initializeTextToSpeech();
 
+    }
+
+    private TextToSpeech myTTS;
+    private void initializeTextToSpeech() {
+        myTTS=new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(myTTS.getEngines().size()==0){
+                    Toast.makeText(AdventureActivity.this, "There is no TTS engine on your device"
+                            , Toast.LENGTH_LONG).show();
+                    finish();
+                }else{
+                    myTTS.setLanguage(Locale.UK);
+                    speak("You are in the adventure section. Below are some places you might find interesting. We suggest to visit Le Morne and the seaplane.");
+
+
+                }
+            }
+        });
+    }
+
+    private void speak(String message){
+        if(Build.VERSION.SDK_INT>=21){
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+        }else{
+            myTTS.speak(message, TextToSpeech.QUEUE_FLUSH, null);
+        }
+    }
+
+
+
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        myTTS.shutdown();
     }
     private void configureMenuButton(){
         ImageButton menu_button = findViewById(R.id.imageButton);

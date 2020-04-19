@@ -41,7 +41,7 @@ public class EcologicalActivity extends AppCompatActivity {
             float delta=acelVal-acelLast;
             shake=shake*0.9f + delta;
 
-            if(shake>40){
+            if(shake>35){
                 Intent intToShopping = new Intent(EcologicalActivity.this, AdventureActivity.class);
                 startActivity(intToShopping);
             }

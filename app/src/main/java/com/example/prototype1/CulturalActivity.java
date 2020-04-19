@@ -123,7 +123,7 @@ public class CulturalActivity extends AppCompatActivity {
                     finish();
                 }else{
                     myTTS.setLanguage(Locale.UK);
-                    speak("You are in the cultural section. Below are some places you might find interesting. We suggest to visit grand bassin.");
+                    speak("You are in the cultural section.  Below are some places you might find interesting. We suggest to visit grand bassin and citadel.");
 
 
                 }
@@ -173,7 +173,7 @@ public class CulturalActivity extends AppCompatActivity {
             shake=shake*0.9f + delta;
 
             if(shake>40){
-                Intent intToShopping = new Intent(CulturalActivity.this, EcologicalActivity.class);
+                Intent intToShopping = new Intent(CulturalActivity.this, AdventureActivity.class);
                 startActivity(intToShopping);
             }
         }

@@ -111,6 +111,8 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
                 RESULT = performCalculations();
                 resultTextView.setText(String.valueOf(RESULT));
                 textToSpeech.speak(String.valueOf(RESULT )+"Mauritian Rupees", TextToSpeech.QUEUE_ADD, null);
+                Intent intToHotel = new Intent(VoiceActivity.this, MainActivity.class);
+                startActivity(intToHotel);
             }
         });
     }

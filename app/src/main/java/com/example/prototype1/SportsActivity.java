@@ -19,7 +19,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
-
+import android.content.Context;
+import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 
 public class SportsActivity extends AppCompatActivity {
 
@@ -28,12 +33,25 @@ public class SportsActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     Spinner mySpinner;
+    private SensorManager sm;
 
+    private float acelVal;
+    private float acelLast;
+    private float shake;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
         configureMenuButton();
+
+        sm=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+
+        acelVal=SensorManager.GRAVITY_EARTH;
+        acelLast=SensorManager.GRAVITY_EARTH;
+        shake=0.00f;
+
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         mySpinner = (Spinner) findViewById(R.id.spinner);
@@ -99,4 +117,29 @@ public class SportsActivity extends AppCompatActivity {
             }
         });
     }
+
+    private final SensorEventListener sensorListener= new SensorEventListener(){
+        @Override
+        public void onSensorChanged(SensorEvent sensorEvent){
+
+            float x=sensorEvent.values[0];
+            float y=sensorEvent.values[1];
+            float z=sensorEvent.values[2];
+
+            acelLast=acelVal;
+            acelVal=(float) Math.sqrt((double) (x*x + y*y* + z*z));
+            float delta=acelVal-acelLast;
+            shake=shake*0.9f + delta;
+
+            if(shake>40){
+                Intent intToShopping = new Intent(SportsActivity.this, CulturalActivity.class);
+                startActivity(intToShopping);
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int i) {
+
+        }
+    };
 }

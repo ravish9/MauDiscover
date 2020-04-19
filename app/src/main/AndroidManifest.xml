@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.prototype1">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-<uses-permission android:name="android.permission.RECORD_AUDIO"/>
-
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EcologicalActivity"></activity>
         <activity android:name=".VoiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,21 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".SportsActivity" />
-        <activity android:name=".NatureActivity" />
         <activity android:name=".CaselaActivity" />
         <activity android:name=".AdventureActivity" />
-        <activity android:name=".EcologicalActivity" />
         <activity android:name=".CulturalActivity" />
         <activity android:name=".ShoppingActivity" />
         <activity android:name=".HotelActivity" />
         <activity android:name=".mainMenu" />
-        <activity android:name=".HomeActivity" >
-
-        </activity>
-        <activity android:name=".LoginActivity"/>
-
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

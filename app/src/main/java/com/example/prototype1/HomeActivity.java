@@ -5,6 +5,11 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -51,6 +56,32 @@ public class HomeActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SensorManager sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
+        final Sensor proximitySensor= sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        SensorEventListener sensorEventListener = new SensorEventListener() {
+            private WindowManager.LayoutParams params;
+
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                if (sensorEvent.values[0]<proximitySensor.getMaximumRange()){
+                    params.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+                    params.screenBrightness = 0;
+                    getWindow().setAttributes(params);
+                }
+
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
+
+            }
+        };
+
+        sensorManager.registerListener(sensorEventListener,proximitySensor,2 * 1000* 1000);
+
+
+
 
         ActivityCompat.requestPermissions(this, new String[]{RECORD_AUDIO} , PackageManager.PERMISSION_GRANTED);
 
@@ -129,6 +160,9 @@ public class HomeActivity extends AppCompatActivity  {
         initializeTextToSpeech();
         initializeSpeechRecognizer();
     }
+
+
+
 
     private void initializeSpeechRecognizer() {
         if (SpeechRecognizer.isRecognitionAvailable(this)) ;
@@ -265,4 +299,5 @@ public class HomeActivity extends AppCompatActivity  {
         super.onPause();
         myTTS.shutdown();
     }
+
 }

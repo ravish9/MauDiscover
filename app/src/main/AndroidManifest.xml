@@ -16,17 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EcologicalActivity"></activity>
-        <activity android:name=".VoiceActivity">
+        <activity android:name=".VoiceActivity"/>
+
+        <activity android:name=".SportsActivity" />
+        <activity android:name=".CaselaActivity" />
+        <activity android:name=".AdventureActivity" />
+        <activity android:name=".CulturalActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SportsActivity" />
-        <activity android:name=".CaselaActivity" />
-        <activity android:name=".AdventureActivity" />
-        <activity android:name=".CulturalActivity" />
         <activity android:name=".ShoppingActivity" />
         <activity android:name=".HotelActivity" />
         <activity android:name=".mainMenu" />

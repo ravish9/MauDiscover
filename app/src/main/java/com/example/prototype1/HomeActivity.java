@@ -17,14 +17,13 @@ import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
-import android.view.LayoutInflater;
+
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.Spinner;
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Locale;
 
@@ -32,8 +31,7 @@ import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -117,16 +115,13 @@ public class HomeActivity extends AppCompatActivity  {
                         intent = new Intent(HomeActivity.this, CulturalActivity.class);
                         startActivity(intent);
                         break;
+
                     case 2:
-                        intent = new Intent(HomeActivity.this, EcologicalActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 3:
                         intent = new Intent(HomeActivity.this, AdventureActivity.class);
                         startActivity(intent);
                         break;
 
-                    case 4:
+                    case 3:
                         intent = new Intent(HomeActivity.this, SportsActivity.class);
                         startActivity(intent);
                         break;

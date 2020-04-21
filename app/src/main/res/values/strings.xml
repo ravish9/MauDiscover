@@ -5,7 +5,6 @@
 
         <item> Select Tourist Type</item>
         <item> Cultural</item>
-        <item> Ecological</item>
         <item> Adventure</item>
         <item> Sports</item>
     </string-array>

@@ -5,26 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.view.LayoutInflater;
+
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.Spinner;
-import java.util.ArrayList;
+
 import java.util.Locale;
 
 import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import android.content.Context;
-import android.content.Intent;
+
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -83,16 +81,13 @@ public class SportsActivity extends AppCompatActivity {
                         intent = new Intent(SportsActivity.this, CulturalActivity.class);
                         startActivity(intent);
                         break;
+
                     case 2:
-                        intent = new Intent(SportsActivity.this, EcologicalActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 3:
                         intent = new Intent(SportsActivity.this, AdventureActivity.class);
                         startActivity(intent);
                         break;
 
-                    case 4:
+                    case 3:
                         intent = new Intent(SportsActivity.this, SportsActivity.class);
                         startActivity(intent);
                         break;

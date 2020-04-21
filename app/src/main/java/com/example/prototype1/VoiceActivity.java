@@ -2,6 +2,10 @@ package com.example.prototype1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -10,7 +14,9 @@ import android.speech.tts.TextToSpeech;
 
 import android.os.Bundle;
 import android.telecom.RemoteConference;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,37 +24,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import java.util.ArrayList;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.speech.RecognizerIntent;
-//import android.support.v4.app.NavUtils;
-import android.content.Intent;
-import android.os.Bundle;
-import android.speech.RecognizerIntent;
-import android.speech.tts.TextToSpeech;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.Locale;
 
 public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnInitListener{
-
+    float x1, x2, y1, y2;
     TextView firstNumTextView;
     //TextView secondNumTextView;
     TextView operatorTextView;
@@ -78,11 +59,7 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
         firstNumTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textToSpeech.speak("Enter the amount you wish to convert", TextToSpeech.QUEUE_ADD, null);
-                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-                startActivityForResult(intent, 10);
+
             }
         });
 
@@ -245,5 +222,27 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
     @Override
     public void onInit(int i) {
 
+    }
+
+    public boolean onTouchEvent(MotionEvent touchEvent){
+        switch(touchEvent.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = touchEvent.getX();
+                y1 = touchEvent.getY();
+                if(x1 < x2){
+                    Intent i = new Intent(VoiceActivity.this, RestaurantActivity.class);
+                    startActivity(i);
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = touchEvent.getX();
+                y2 = touchEvent.getY();
+                if(x1 > x2){
+                    Intent i = new Intent(VoiceActivity.this, HotelActivity.class);
+                    startActivity(i);
+                }
+                break;
+        }
+        return false;
     }
 }

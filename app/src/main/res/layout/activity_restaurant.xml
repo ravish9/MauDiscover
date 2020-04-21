@@ -6,4 +6,425 @@
     android:layout_height="match_parent"
     tools:context=".RestaurantActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="303dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Hotels."
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:fontFamily="sans-serif-condensed-light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.103"
+            tools:text="Hotels" />
+
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="69dp"
+            android:layout_height="71dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menu"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ScrollView
+            android:layout_width="413dp"
+            android:layout_height="609dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+
+                <RelativeLayout
+                    android:layout_width="429dp"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="@id/image_button_android"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:text="The Deer Hunter"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/image_button_android"
+                        android:layout_width="229dp"
+                        android:layout_height="163dp"
+                        android:layout_alignBottom="@+id/textView3"
+                        android:layout_marginBottom="-168dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/r1"
+                        android:textColor="#FAF1F1"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/image_button_android"
+                        android:paddingTop="40dp">
+
+                        <Button
+                            android:id="@+id/buttonHotel1Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Belle Mare Plage"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="180dp"
+                            android:layout_height="72dp"
+                            android:layout_below="@+id/buttonHotel1Map"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="Vegetarian Friendly, Gluten Free Options, Vegan Options"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonBook1"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView4"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Book Now"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="429dp"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="@id/image_button_android2"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Noble House Restaurant"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/image_button_android2"
+                        android:layout_width="229dp"
+                        android:layout_height="163dp"
+                        android:layout_alignBottom="@+id/textView5"
+                        android:layout_marginBottom="-168dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/r2"
+                        android:textColor="#FAF1F1"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/image_button_android2"
+                        android:paddingTop="40dp">
+
+                        <Button
+                            android:id="@+id/buttonHotel2Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Balaclava Fort, Coastal Road, Balaclava, Mauritius
+"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="180dp"
+                            android:layout_height="72dp"
+                            android:layout_below="@+id/buttonHotel2Map"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="Chinese, Asian, Thai"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonBook2"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView6"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Book Now"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="429dp"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="@id/image_button_android3"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:text="The Plantation Club
+"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/image_button_android3"
+                        android:layout_width="229dp"
+                        android:layout_height="163dp"
+                        android:layout_alignBottom="@+id/textView7"
+                        android:layout_marginBottom="-168dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/r3"
+                        android:textColor="#FAF1F1"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/image_button_android3"
+                        android:paddingTop="40dp">
+
+                        <Button
+                            android:id="@+id/buttonHotel3Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Allee des Cocotiers, Bel Ombre,"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="180dp"
+                            android:layout_height="72dp"
+                            android:layout_below="@+id/buttonHotel3Map"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="European, Contemporary"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonBook3"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView8"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Book Now"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="429dp"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="@id/image_button_android4"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Hilton Resort And Spa"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/image_button_android4"
+                        android:layout_width="229dp"
+                        android:layout_height="163dp"
+                        android:layout_alignBottom="@+id/textView9"
+                        android:layout_marginBottom="-168dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/hotel4"
+                        android:textColor="#FAF1F1"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/image_button_android4"
+                        android:paddingTop="40dp">
+
+                        <Button
+                            android:id="@+id/buttonHotel4Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Coastal Road Wolmar, Flic En Flac,"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="180dp"
+                            android:layout_height="72dp"
+                            android:layout_below="@+id/buttonHotel4Map"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="Relax at Hilton Mauritius Resort And Spa, renowned for its Mauritian hospitality, and enjoy a picturesque oceanfront location with unrestricted sunset views. Our location makes it easy to explore the island and its surroundings. We offer a complimentary dolphin trip, water activities and eight spa cabins. Our three restaurants and three bars serve a diverse array of culinary influences, exotic flavors and locally sourced ingredients. The hotel's gorgeous outdoor meeting space has everything you need for an inspired event."
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonBook4"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView10"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Book Now"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="429dp"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="@id/image_button_android5"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Four Seasons Resort"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/image_button_android5"
+                        android:layout_width="229dp"
+                        android:layout_height="163dp"
+                        android:layout_alignBottom="@+id/textView11"
+                        android:layout_marginBottom="-168dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/hotel5"
+                        android:textColor="#FAF1F1"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/image_button_android5"
+                        android:paddingTop="40dp">
+
+                        <Button
+                            android:id="@+id/buttonHotel5Map"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Coastal Road, Beau Champ"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="180dp"
+                            android:layout_height="72dp"
+                            android:layout_below="@+id/buttonHotel5Map"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="Four Seasons Resort Mauritius at Anahita consists of 136 pool villas and residences and offers unlimited, complimentary golf on two championship golf courses; the Ernie Els Design course at Anahita and the Bernhard Langer course at Ile aux Cerfs Golf Club. The Resort encompasses a private island, which is home to secluded beaches, as well as offering an exclusive beach, bar and grill on Ile aux Cerfs. Each villa features an al fresco shower, extensive veranda, plunge pool and private garden, ideal for honeymooners and privacy lovers. The "
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonBook5"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView12"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg"
+                            android:padding="12dip"
+                            android:paddingRight="5dp"
+                            android:text="Book Now"
+                            android:textColor="#444242"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

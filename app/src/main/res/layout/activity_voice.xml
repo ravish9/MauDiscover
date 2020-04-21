@@ -6,19 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".VoiceActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Currency Converter"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        tools:text="Currency Converter" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="69dp"
+        android:layout_height="71dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/menu"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="230dp"
         android:layout_height="84dp"
-        android:layout_marginTop="80dp"
-        android:background="#4CAF50"
+        android:layout_marginTop="64dp"
+        android:background="#9B4A97FF"
         android:clickable="false"
         android:gravity="center"
         android:text="0"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/operatorTextView" />
 
@@ -27,31 +62,31 @@
         android:layout_width="224dp"
         android:layout_height="79dp"
         android:layout_marginBottom="32dp"
-        android:background="#2196F3"
+        android:background="#F9A12EFF"
         android:clickable="true"
         android:gravity="center"
         android:text="Enter Amount"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/operatorTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/operatorTextView"
         android:layout_width="231dp"
         android:layout_height="82dp"
-        android:layout_marginBottom="360dp"
-        android:background="#FF9800"
+        android:layout_marginBottom="376dp"
+        android:background="#FC766AFF"
         android:clickable="true"
         android:gravity="center"
         android:text="Enter Currency"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

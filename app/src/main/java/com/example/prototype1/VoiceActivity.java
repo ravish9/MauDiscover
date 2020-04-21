@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +48,8 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voice);
+
+        configureMenuButton();
 
         textToSpeech = new TextToSpeech(this, this);
 
@@ -244,5 +247,15 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
                 break;
         }
         return false;
+    }
+
+    private void configureMenuButton() {
+        ImageButton menu_button = findViewById(R.id.imageButton);
+        menu_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(VoiceActivity.this, mainMenu.class));
+            }
+        });
     }
 }

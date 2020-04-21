@@ -44,8 +44,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="399dp"
-        android:layout_height="606dp"
+        android:layout_width="413dp"
+        android:layout_height="609dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
+
 
 
             <RelativeLayout
@@ -106,7 +107,7 @@
                         android:layout_height="72dp"
                         android:layout_below="@+id/buttonHotel1Map"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="-3dp"
+                        android:layout_marginTop="-2dp"
                         android:text="With 54 stylish suites and a lavish Imperial Pool Villa, featuring private infinity pools and hammams, jet pools"
                         android:textSize="12sp" />
 

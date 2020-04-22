@@ -19,23 +19,33 @@ import android.speech.tts.TextToSpeech;
 import java.util.Locale;
 
 
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.app.Activity;
+import android.graphics.Matrix;
 
 
-public class CaselaActivity extends AppCompatActivity {
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
+
+public class CaselaActivity extends Activity {
 
     Button buttonCaselaMap;
     Button buttonCaselaWebsite;
+    private ImageView iv;
+    private Matrix matrix = new Matrix();
+    private float scale = 1f;
+    private ScaleGestureDetector SGD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_casela);
 
-
+        iv=(ImageView)findViewById(R.id.button7);
         buttonCaselaWebsite =  findViewById(R.id.buttonCaselaWebsite);
         buttonCaselaMap =  findViewById(R.id.buttonCaselaMap);
-
+        SGD = new ScaleGestureDetector(this,new ScaleListener());
         buttonCaselaWebsite.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -103,6 +113,24 @@ public class CaselaActivity extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         myTTS.shutdown();
+    }
+
+    public boolean onTouchEvent(MotionEvent ev) {
+        SGD.onTouchEvent(ev);
+        return true;
+    }
+
+    private class ScaleListener extends ScaleGestureDetector.
+            SimpleOnScaleGestureListener {
+
+        @Override
+        public boolean onScale(ScaleGestureDetector detector) {
+            scale *= detector.getScaleFactor();
+            scale = Math.max(0.1f, Math.min(scale, 5.0f));
+            matrix.setScale(scale, scale);
+            iv.setImageMatrix(matrix);
+            return true;
+        }
     }
 }
 

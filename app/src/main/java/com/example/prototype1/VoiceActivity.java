@@ -48,7 +48,7 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voice);
-
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         configureMenuButton();
 
         textToSpeech = new TextToSpeech(this, this);
@@ -62,19 +62,14 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
         firstNumTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+               Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+               intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
+                startActivityForResult(intent, 10);
             }
         });
 
-        //secondNumTextView.setOnClickListener(new View.OnClickListener() {
-        // @Override
-        // public void onClick(View view) {
-        //  Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        //  intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        //intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
-        //startActivityForResult(intent, 20);
-        // }
-        // });
+
 
         operatorTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,15 +109,7 @@ public class VoiceActivity extends AppCompatActivity implements TextToSpeech.OnI
                         textToSpeech.speak("Sorry Number not available. Please try again ", TextToSpeech.QUEUE_ADD, null);
                     }
                     break;
-                //case 20:
-                //intFound = getNumberFromResult(data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS));
-                // if (intFound != -1) {
-                //SECOND_NUMBER = intFound;
-                //secondNumTextView.setText(String.valueOf(intFound));
-                //} else {
-                // Toast.makeText(getApplicationContext(), "Sorry, I didn't catch that! Please try again", Toast.LENGTH_LONG).show();
-                //  }
-                // break;
+
                 case 30:
                     char operatorFound = getOperatorFromResult(data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS));
                     if (operatorFound != '0') {

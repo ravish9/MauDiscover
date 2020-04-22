@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CaselaActivity">
 
-    <Button
+    <ImageView
         android:id="@+id/button7"
         android:layout_width="416dp"
         android:layout_height="327dp"
